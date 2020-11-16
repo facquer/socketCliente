@@ -28,13 +28,12 @@ public class Conector extends Thread {
     public void run() {
         int i = 1;
         try {
-            socket = new Socket(main.main.getVista().getTextIp().getText().toString(), Integer.valueOf(main.main.getVista().getTextPuerto().getText().toString()));
-            main.main.getVista().getTextServer().setText("Conectado con el servidor");
+            socket = new Socket("127.0.0.1", Integer.valueOf(main.main.getVista().getTextPuerto().getText().toString()));
+            main.main.getVista().getTextServer().append(" Conectado con el servidor \n");
             while (!socket.isClosed()) {
                 entrada = new BufferedReader(new InputStreamReader(socket.getInputStream()));
-
                 String msg = entrada.readLine();
-                main.main.getVista().getTextServer().setText(msg);
+                main.main.getVista().getTextServer().append(" "+msg+"\n");
             }
 
         } catch (Exception e) {
@@ -46,7 +45,7 @@ public class Conector extends Thread {
         try {
             String msg = main.main.getVista().getTextEnviar().getText().toString();
             salida = new PrintStream(socket.getOutputStream());
-            salida.println(msg);
+            salida.println(main.main.getVista().getTxtNombre().getText().toString() +": "+msg);
             main.main.getVista().getTextEnviar().setText("");
         } catch (IOException ex) {
             Logger.getLogger(Conector.class.getName()).log(Level.SEVERE, null, ex);

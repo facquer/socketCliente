@@ -20,6 +20,8 @@ public class main {
     public static void main(String[] args) {
         // TODO code application logic here
         vista = new vistaCliente();
+        vista.resize(795, 455);
+        vista.setResizable(false);
         vista.setVisible(true);
     }
 

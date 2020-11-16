@@ -6,6 +6,7 @@
 package vista;
 
 import cliente.Conector;
+import javax.swing.ImageIcon;
 import javax.swing.JTextArea;
 import javax.swing.JTextField;
 
@@ -33,128 +34,179 @@ public class vistaCliente extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        textIp = new javax.swing.JTextField();
+        jFrame1 = new javax.swing.JFrame();
+        jFrame2 = new javax.swing.JFrame();
         textPuerto = new javax.swing.JTextField();
-        jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         buttonConectar = new javax.swing.JButton();
-        buttonDesconectar = new javax.swing.JButton();
-        textEnviar = new javax.swing.JTextField();
-        jLabel3 = new javax.swing.JLabel();
         buttonEnviar = new javax.swing.JButton();
+        jLabel5 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
+        jLabel7 = new javax.swing.JLabel();
+        txtNombre = new javax.swing.JTextField();
+        textEnviar = new javax.swing.JTextField();
+        jLabel9 = new javax.swing.JLabel();
+        jLabel8 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         textServer = new javax.swing.JTextArea();
         jLabel4 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        buttonEnviar1 = new javax.swing.JButton();
+        buttonEnviar2 = new javax.swing.JButton();
+
+        javax.swing.GroupLayout jFrame1Layout = new javax.swing.GroupLayout(jFrame1.getContentPane());
+        jFrame1.getContentPane().setLayout(jFrame1Layout);
+        jFrame1Layout.setHorizontalGroup(
+            jFrame1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 400, Short.MAX_VALUE)
+        );
+        jFrame1Layout.setVerticalGroup(
+            jFrame1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 300, Short.MAX_VALUE)
+        );
+
+        javax.swing.GroupLayout jFrame2Layout = new javax.swing.GroupLayout(jFrame2.getContentPane());
+        jFrame2.getContentPane().setLayout(jFrame2Layout);
+        jFrame2Layout.setHorizontalGroup(
+            jFrame2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 400, Short.MAX_VALUE)
+        );
+        jFrame2Layout.setVerticalGroup(
+            jFrame2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 300, Short.MAX_VALUE)
+        );
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setForeground(java.awt.Color.gray);
+        getContentPane().setLayout(null);
 
-        textIp.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                textIpActionPerformed(evt);
-            }
-        });
+        textPuerto.setBackground(new java.awt.Color(52, 56, 59));
+        textPuerto.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        textPuerto.setForeground(new java.awt.Color(255, 255, 255));
+        getContentPane().add(textPuerto);
+        textPuerto.setBounds(550, 30, 80, 28);
 
-        jLabel1.setText("IP:");
+        jLabel2.setFont(new java.awt.Font("Ubuntu Mono", 1, 18)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel2.setText("PUERTO");
+        getContentPane().add(jLabel2);
+        jLabel2.setBounds(550, 0, 90, 30);
 
-        jLabel2.setText("PUERTO:");
-
-        buttonConectar.setText("Conectar");
+        buttonConectar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/BotonConectar.png"))); // NOI18N
+        buttonConectar.setBorder(null);
         buttonConectar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 buttonConectarActionPerformed(evt);
             }
         });
+        getContentPane().add(buttonConectar);
+        buttonConectar.setBounds(640, 10, 50, 50);
 
-        buttonDesconectar.setText("Desconectar");
-
-        jLabel3.setText("Enviar mensaje");
-
+        buttonEnviar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/Boton.png"))); // NOI18N
         buttonEnviar.setText("Enviar");
+        buttonEnviar.setBorder(null);
         buttonEnviar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 buttonEnviarActionPerformed(evt);
             }
         });
-
-        textServer.setColumns(20);
-        textServer.setRows(5);
-        jScrollPane1.setViewportView(textServer);
-
-        jLabel4.setText("SERVIDOR");
+        getContentPane().add(buttonEnviar);
+        buttonEnviar.setBounds(720, 350, 60, 60);
 
         jLabel5.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jLabel5.setText("CLIENTE SOCKET");
         jLabel5.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        getContentPane().add(jLabel5);
+        jLabel5.setBounds(990, 13, 148, 28);
 
         jLabel6.setText("Angel Ruiz - David Morales");
+        getContentPane().add(jLabel6);
+        jLabel6.setBounds(990, 53, 153, 16);
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel4)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                .addComponent(jLabel3)
-                                .addGroup(layout.createSequentialGroup()
-                                    .addComponent(textEnviar, javax.swing.GroupLayout.PREFERRED_SIZE, 373, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(buttonEnviar))
-                                .addComponent(jScrollPane1)))
-                        .addGap(0, 12, Short.MAX_VALUE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(jLabel2)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(textPuerto))
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(jLabel1)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(textIp, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addGap(37, 37, 37)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(buttonConectar)
-                            .addComponent(buttonDesconectar))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel6)
-                            .addComponent(jLabel5))))
-                .addContainerGap())
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(textIp, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel1)
-                    .addComponent(jLabel5)
-                    .addComponent(buttonConectar))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(textPuerto, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel2)
-                    .addComponent(buttonDesconectar)
-                    .addComponent(jLabel6))
-                .addGap(18, 18, 18)
-                .addComponent(jLabel3)
-                .addGap(6, 6, 6)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(textEnviar, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(buttonEnviar))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLabel4)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
-        );
+        jLabel7.setFont(new java.awt.Font("Ubuntu Mono", 1, 18)); // NOI18N
+        jLabel7.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel7.setText("NOMBRE");
+        getContentPane().add(jLabel7);
+        jLabel7.setBounds(220, 10, 120, 19);
+
+        txtNombre.setBackground(new java.awt.Color(52, 56, 59));
+        txtNombre.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        txtNombre.setForeground(new java.awt.Color(255, 255, 255));
+        txtNombre.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtNombreActionPerformed(evt);
+            }
+        });
+        getContentPane().add(txtNombre);
+        txtNombre.setBounds(220, 30, 117, 23);
+
+        textEnviar.setBackground(new java.awt.Color(52, 56, 59));
+        textEnviar.setFont(new java.awt.Font("Tahoma", 0, 15)); // NOI18N
+        textEnviar.setForeground(new java.awt.Color(255, 255, 255));
+        textEnviar.setBounds(150, 150, 150, 150);
+        textEnviar.setBorder(null);
+        textEnviar.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
+        textEnviar.setPreferredSize(new java.awt.Dimension(5, 22));
+        textEnviar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                textEnviarActionPerformed(evt);
+            }
+        });
+        getContentPane().add(textEnviar);
+        textEnviar.setBounds(100, 360, 600, 30);
+
+        jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/BarraWs.png"))); // NOI18N
+        jLabel9.setText("jLabel9");
+        getContentPane().add(jLabel9);
+        jLabel9.setBounds(0, 350, 720, 50);
+
+        jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/BG.png"))); // NOI18N
+        jLabel8.setText("jLabel8");
+        getContentPane().add(jLabel8);
+        jLabel8.setBounds(0, 340, 780, 70);
+
+        textServer.setEditable(false);
+        textServer.setBackground(new java.awt.Color(0, 0, 0));
+        textServer.setColumns(20);
+        textServer.setFont(new java.awt.Font("Monospaced", 1, 18)); // NOI18N
+        textServer.setForeground(new java.awt.Color(255, 255, 255));
+        textServer.setRows(5);
+        textServer.setAlignmentX(1.0F);
+        textServer.setBorder(null);
+        jScrollPane1.setViewportView(textServer);
+
+        getContentPane().add(jScrollPane1);
+        jScrollPane1.setBounds(0, 60, 780, 290);
+
+        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/wsIcon.png"))); // NOI18N
+        getContentPane().add(jLabel4);
+        jLabel4.setBounds(-110, 0, 400, 80);
+
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/bgTOP.png"))); // NOI18N
+        getContentPane().add(jLabel3);
+        jLabel3.setBounds(0, 0, 780, 70);
+
+        buttonEnviar1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/Boton.png"))); // NOI18N
+        buttonEnviar1.setText("Enviar");
+        buttonEnviar1.setBorder(null);
+        buttonEnviar1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                buttonEnviar1ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(buttonEnviar1);
+        buttonEnviar1.setBounds(720, 350, 60, 60);
+
+        buttonEnviar2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/Boton.png"))); // NOI18N
+        buttonEnviar2.setText("Enviar");
+        buttonEnviar2.setBorder(null);
+        buttonEnviar2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                buttonEnviar2ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(buttonEnviar2);
+        buttonEnviar2.setBounds(720, 350, 60, 60);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -167,13 +219,6 @@ public class vistaCliente extends javax.swing.JFrame {
         this.textEnviar = textEnviar;
     }
 
-    public JTextField getTextIp() {
-        return textIp;
-    }
-
-    public void setTextIp(JTextField textIp) {
-        this.textIp = textIp;
-    }
 
     public JTextField getTextPuerto() {
         return textPuerto;
@@ -191,9 +236,13 @@ public class vistaCliente extends javax.swing.JFrame {
         this.textServer = textServer;
     }
 
-    private void textIpActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_textIpActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_textIpActionPerformed
+    public JTextField getTxtNombre() {
+        return txtNombre;
+    }
+
+    public void setTxtNombre(JTextField txtNombre) {
+        this.txtNombre = txtNombre;
+    }
 
     private void buttonConectarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonConectarActionPerformed
         // TODO add your handling code here:
@@ -203,6 +252,22 @@ public class vistaCliente extends javax.swing.JFrame {
     private void buttonEnviarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonEnviarActionPerformed
         server.enviarMsg();
     }//GEN-LAST:event_buttonEnviarActionPerformed
+
+    private void textEnviarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_textEnviarActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_textEnviarActionPerformed
+
+    private void txtNombreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNombreActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtNombreActionPerformed
+
+    private void buttonEnviar1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonEnviar1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_buttonEnviar1ActionPerformed
+
+    private void buttonEnviar2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonEnviar2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_buttonEnviar2ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -238,21 +303,28 @@ public class vistaCliente extends javax.swing.JFrame {
             }
         });
     }
+    
+    
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton buttonConectar;
-    private javax.swing.JButton buttonDesconectar;
     private javax.swing.JButton buttonEnviar;
-    private javax.swing.JLabel jLabel1;
+    private javax.swing.JButton buttonEnviar1;
+    private javax.swing.JButton buttonEnviar2;
+    private javax.swing.JFrame jFrame1;
+    private javax.swing.JFrame jFrame2;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTextField textEnviar;
-    private javax.swing.JTextField textIp;
     private javax.swing.JTextField textPuerto;
     private javax.swing.JTextArea textServer;
+    private javax.swing.JTextField txtNombre;
     // End of variables declaration//GEN-END:variables
 }
